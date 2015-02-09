@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var audioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +24,23 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func PlaySound(sender: UIButton) {
+        
+        // Set the sound file name & extension
+        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Mario", ofType: "mp3")!)
+        
+        // Preperation
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        AVAudioSession.sharedInstance().setActive(true, error: nil)
+        
+        // Play the sound
+        var error: NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        
+        
+        
+    }
 }
 

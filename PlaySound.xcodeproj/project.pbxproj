@@ -13,6 +13,7 @@
 		94BF29CE1A88C24100E358C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BF29CD1A88C24100E358C0 /* Images.xcassets */; };
 		94BF29D11A88C24100E358C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94BF29CF1A88C24100E358C0 /* LaunchScreen.xib */; };
 		94BF29DD1A88C24100E358C0 /* PlaySoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF29DC1A88C24100E358C0 /* PlaySoundTests.swift */; };
+		94BF29E71A88C25F00E358C0 /* Mario.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 94BF29E61A88C25F00E358C0 /* Mario.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		94BF29D61A88C24100E358C0 /* PlaySoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaySoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BF29DB1A88C24100E358C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94BF29DC1A88C24100E358C0 /* PlaySoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySoundTests.swift; sourceTree = "<group>"; };
+		94BF29E61A88C25F00E358C0 /* Mario.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mario.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		94BF29C41A88C24100E358C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94BF29E61A88C25F00E358C0 /* Mario.mp3 */,
 				94BF29C51A88C24100E358C0 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -195,6 +198,7 @@
 				94BF29CC1A88C24100E358C0 /* Main.storyboard in Resources */,
 				94BF29D11A88C24100E358C0 /* LaunchScreen.xib in Resources */,
 				94BF29CE1A88C24100E358C0 /* Images.xcassets in Resources */,
+				94BF29E71A88C25F00E358C0 /* Mario.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
