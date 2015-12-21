@@ -27,15 +27,24 @@ class ViewController: UIViewController {
     @IBAction func PlaySound(sender: UIButton) {
         
         // Set the sound file name & extension
-        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Mario", ofType: "mp3")!)
+        let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Mario", ofType: "mp3")!)
         
-        // Preperation
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-        AVAudioSession.sharedInstance().setActive(true, error: nil)
+        do {
+            // Preperation
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch _ {
+        }
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch _ {
+        }
         
         // Play the sound
-        var error: NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
+        } catch _{
+        }
+        
         audioPlayer.prepareToPlay()
         audioPlayer.play()
         
