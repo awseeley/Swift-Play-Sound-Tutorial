@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func PlaySound(sender: UIButton) {
+    @IBAction func PlaySound(_ sender: UIButton) {
         
         // Set the sound file name & extension
-        let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Mario", ofType: "mp3")!)
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "Mario", ofType: "mp3")!)
         
         do {
             // Preperation
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         
         // Play the sound
         do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
+            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
         } catch _{
         }
         
